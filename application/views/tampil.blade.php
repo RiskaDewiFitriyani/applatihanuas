@@ -50,10 +50,7 @@
           <td>{{$post->artikel}}</td>
           <td>{{$post->created_at}}</td>
           <td>{{$post->Update_at}}</td>
-          <td>
-            <a href="{{ site_url('welcome/hapus/' . $post->id) }}" class="btn btn-danger"> hapus </a>
-            <a href="{{ site_url('welcome/ubah/' . $post->id) }}" class="btn btn-info"> ubah </a>
-            </td>
+          <td><a href="{{ site_url('welcome/hapus/' . $post->id) }}"> hapus </a> | <a href="{{ site_url('welcome/ubah/' . $post->id) }}"> ubah </a></td>
           </tr>
           @endforeach
         </table>

@@ -32,13 +32,14 @@
     <div class="row g-5">
       <div class="col-md-6">
         <h2 class="text-body-emphasis">Form Input Artikel</h2>
+        <form method="post" action="{{ site_url('welcome/update/' .$post->id) }}">
         <p>Masukan data yang akan di proses</p> 
         <form>
             <div class="mb-3">
                 <label for="exampleInputEmail1" class="form-label">Username</label>
                 <select class="form-control" name="username">
                   @foreach($avail_user as $user)
-                  <option value="{{ $user->id }}" {{ $post->user_id==$user->id ? "selected" :""}}>{{ $user->username }}</option>
+                  <option value="{{ $user->id }}">{{ $user->username }}</option>
                   @endforeach 
                 </select>
             </div>

@@ -74,13 +74,14 @@ class Welcome extends CI_Controller
         $this->_createView('update', ['post'=>$post, 'avail_user'=> $avail_user]);
     }
 
-    public function update($id){
+    public function update($id)
+    {
         $post = Post::find($id);
-        $post->user_id = $this->input->post('user_id');
+        $post->user_id = $this->input->post('username');
         $post->artikel = $this->input->post('artikel');
         $post->save();
-
-        redirect('welcome/tampil'); 
+    
+        redirect('welcome/tampil');
     }
 
     public function tampil()
